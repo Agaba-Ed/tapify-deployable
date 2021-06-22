@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tapify</title>
+</head>
+<body>
+    <header id="header">
+        <!----toggle button for mobile devices-->
+        <img src="images/menu icon.svg" class="toggle-button" alt="" onclick="toggle()">
+    
+        
+        <!-- Logo doesn't display in mobile version-->
+        <div></div>
+        <img id="logo" src="images/tapify.png" alt="">
+
+
+        <p>tapify</p>
+        <!-- display turned none-->
+         <nav id="menu" onclick="closenav()">
+                <ul id="menu-list">
+                    <li>
+                        <a href="#header">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#services">SERVICES</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+         </nav>
+    </header>
+
+    <main>
+    <div id="welcome-section">
+        <section id="intro" class=" col-12 col-6">
+
+            <div id="intro-content">
+                <h3>
+                    tapify
+                </h3>
+    
+                <hr style="color:white;">
+                <h2>
+                    ACCESS AT YOUR FINGER TIP.
+                </h2>
+                <p>
+                    Work with us to increase productivity and efficiency in your business processes with software solutions that you can touch.
+                </p>
+
+                <div id="intro-button">LEARN MORE</div>
+                
+            </div>
+            
+
+        </section>
+        <article id="more-info" class="col-12 col-6">
+            <div class="section-header">
+                <h2>
+                    HOW WE DO IT? 
+                </h2>
+                <img src="images/arrow back.svg" alt="">
+                <img src="images/arrow.svg" alt="">
+            </div>
+
+        <div class="info">
+            <h3>IDEATION</h3>
+            <p><b>Tell us your idea. We bring it to life better.</b></p>
+            <p>We involve you in each step so you are in full control of your product.</p>
+            <h3>CONTRACTS AND MAINTAINENCE</h3>
+            <p><b>Make an agreement with us to continue improving the product.</b></p>
+            <p>The product stays with you, but you can always call us to make changes.</p>
+         
+
+        </div>
+          
+         
+        </article>
+
+    </div>
+    <div class="section-header" id="services-header">
+        <h2>
+            SERVICES 
+        </h2>
+        <img src="images/arrow back.svg" alt="">
+        <img onclick="next()" src="images/arrow.svg" alt="">
+    </div>
+        <section id="services">
+            
+            <div class="card">
+                <div class="cardImage">
+                    <img src="images/mobile-applications.jpg" alt="" width="100%">
+                </div>
+                <div class="cardTitle">Mobile applications</div>
+                <div class="cardText">We develop mobile applications for android and iOs.</div>
+            </div>
+            <div class="card">
+                <div class="cardImage">
+                    <img src="images/websites.jpg" alt="" width="100%">
+                </div>
+                <div class="cardTitle">Websites</div>
+                <div class="cardText">
+                    We design and develop websites and any form of web applications.</div>
+            </div>
+            <div id="defaultNoDisplay" class="card">
+                <div class="cardImage">
+                    <img src="images/business-ss.jpg" alt="" width="100%">
+                </div>
+                <div class="cardTitle">
+                    Business Support Systems</div>
+                <div class="cardText">
+                    We create  systems that run on both desktop and mobile to support business processes.
+                </div>
+            </div>
+        </section>
+        <div class="section-header" id="about-header">
+            <h2>
+                ABOUT US
+            </h2>
+            <img src="images/arrow back.svg" alt="">
+            <img src="images/arrow.svg" alt="">
+        </div>
+        <section id="about">
+          
+
+                <div class="col-6">
+                    <h3>
+                        MISSION
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error id, esse iusto neque accusamus necessitatibus sequi tenetur illum tempora excepturi deserunt quasi laudantium, cupiditate voluptas laborum quaerat. Molestias, impedit.
+                    </p>
+                </div>
+                
+                <div class="col-6">
+                    <h3>
+                        VISION
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error id, esse iusto neque accusamus necessitatibus sequi tenetur illum tempora excepturi deserunt quasi laudantium, cupiditate voluptas laborum quaerat. Molestias, impedit.
+                    </p>
+                </div>
+
+        </section>
+    
+    </main>
+
+    <footer >
+        <div style="flex: 50%;">
+            <p>tapify</p>
+        </div>
+        
+        <div id="footer-links" style="flex:50%;">
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li><a href="">Ideation</a></li>
+                <li><a href="">Photos</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <ul >
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li><a href="">Help</a></li>
+                <li><a href="">Term</a></li>
+                <li><a href="">Guidelines</a></li>
+            </ul>
+            <ul >
+                <li>
+                    <a href="">Testimonials</a>
+                </li>
+                <li><a href="">Advertise</a></li>
+                <li><a href="">Integrations</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+        </div>
+        
+        <div style="flex: 50%;">
+        <div id="email-us">
+            <input type="text" placeholder="Email us"  >
+            <img src="images/send.svg" alt="">
+        </div>
+        
+        <p style="font-size: 0.8rem;">Stay in touch with us for the freshest products</p>
+        </div>
+        
+        <div style="flex: 50%;">
+        
+            <p><small>&copy; 2021 Tapify - All rights reserved</small></p>
+            <p>Contact us via <a href="mailto:info@tapify.com">info@tapify.com</a></p>
+            <img src="images/instagram.svg" alt="" style="color: black;">
+            <img src="images/twitter.svg" alt="">
+            <img src="images/facebook.svg" alt="">
+            <img src="images/web.svg" alt="">
+
+        </div>
+        
+    </footer>
+
+    <script>
+        function toggle() {
+
+            document.getElementById('menu').style.width="160px";
+            
+            
+        }
+
+        function closenav() {
+
+            if(window.innerWidth<=480){
+
+            document.getElementById('menu').style.width="0px";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
