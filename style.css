@@ -27,11 +27,11 @@ header p {
     flex-grow: 5;
 }
 
-.toggle-button{
+.toggle-button {
     display: none;
 }
 
-#logo{
+#logo {
     display: block;
 }
 
@@ -39,7 +39,7 @@ header p {
     display: flex;
 }
 
-#menu li{
+#menu li {
     list-style-type: none;
 }
 
@@ -54,13 +54,14 @@ header p {
 
 }
 
-#menu a:hover{
+#menu a:hover {
     color: #008037;
 }
 
-#menu a:active{
+#menu a:active {
     color: #008037;
 }
+
 /*Card*/
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -82,16 +83,16 @@ header p {
 
 .cardTitle {
     font-weight: 700;
-    margin: 1rem 0rem 0.2rem 0rem ;
+    margin: 1rem 0rem 0.2rem 0rem;
 }
 
-.cardImage img{
+.cardImage img {
     border-radius: 4px 4px 0px 0px;
 }
 
 /*Main*/
 #welcome-section {
-    display: flex;
+    display: grid;
 }
 
 #intro {
@@ -169,15 +170,21 @@ header p {
 #about {
 
     margin: 5rem 5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 1rem;
 
 }
 
 #services {
 
     margin: 0 5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 1rem;
 }
+
+
 
 article {
     height: 400px;
@@ -191,9 +198,12 @@ footer {
     background-color: #008037;
     color: white;
     font-size: 0.9rem;
-    display: flex;
+    display: grid;
     padding: 3rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 1rem;
 }
+
 
 
 #footer-links {
@@ -201,6 +211,8 @@ footer {
     justify-content: space-between;
     margin: 1rem;
 }
+
+
 
 #footer-links li {
     list-style-type: none;
@@ -214,6 +226,7 @@ footer a {
     text-decoration: none;
 
 }
+
 
 #email-us input {
     background-color: #008037;
@@ -236,10 +249,11 @@ footer a {
 }
 
 /*For mobile devices */
-@media screen and (max-width:480px) {
-    body{
+ @media only screen and (max-width: 600px) {
+    body {
         font-size: medium;
     }
+
     #intro {
         color: #008037;
         background-image: url(images/brand-photo.jpg);
@@ -248,7 +262,7 @@ footer a {
         background-size: cover;
     }
 
-    #logo{
+    #logo {
         display: none;
     }
 
@@ -268,21 +282,16 @@ footer a {
         flex-direction: column;
     }
 
-    #more-info{
+    #more-info {
         padding: 2rem 0.5rem;
     }
 
     #services,
     #about {
         margin: 0 0.2rem 0 0.2rem;
-        display: flex;
-        flex-direction: column;
+        grid: grid;
+        grid-template-columns: 1fr;
 
-    }
-
-    #welcome-section {
-        display: flex;
-        flex-direction: column;
     }
 
     #sections-header {
@@ -309,7 +318,7 @@ footer a {
         padding-top: 60px;
     }
 
-    #menu-list{
+    #menu-list {
         flex-direction: column;
     }
 
@@ -325,11 +334,11 @@ footer a {
         font-weight: 700;
     }
 
-    #menu a:hover{
+    #menu a:hover {
         color: #008037;
     }
 
-    #menu a:active{
+    #menu a:active {
         color: #008037;
     }
 
@@ -339,21 +348,67 @@ footer a {
     }
 
     footer {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1rem;
     }
 
-}
+ }
 
-
-/*For tablets */
-@media screen and (max-width:768px) {
+ /* For tablets */
+ @media only screen and (min-width: 600px) {
     #welcome-section {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns:1fr;
     }
 
-    article{
+    footer{
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 1rem;
+    }
+
+
+    article {
         height: fit-content;
     }
-}
+
+    #services{
+        
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 1rem;
+    
+    }
+
+    #services>div:last-child{
+        display: none;
+    }
+ }
+ /* For laptops */
+ @media only screen and (min-width: 980px) {
+     
+    footer {
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 1rem;
+    }
+
+    #welcome-section{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #services{
+        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 1rem;
+        
+        }
+
+
+
+    #services>div:last-child{
+        display: block;
+    }
+
+
+ }
+ 

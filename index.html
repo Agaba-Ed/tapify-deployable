@@ -72,11 +72,10 @@
 
         <div class="info">
             <h3>IDEATION</h3>
-            <p><b>Tell us your idea. We bring it to life better.</b></p>
-            <p>We involve you in each step so you are in full control of your product.</p>
+            <p><b>Tell us your idea.</b></p>
+            <p><b>We involve you in each step so you are in full control of your product.</b></p>
             <h3>CONTRACTS AND MAINTAINENCE</h3>
             <p><b>Make an agreement with us to continue improving the product.</b></p>
-            <p>The product stays with you, but you can always call us to make changes.</p>
          
 
         </div>
@@ -89,7 +88,7 @@
         <h2>
             SERVICES 
         </h2>
-        <img src="images/arrow back.svg" alt="">
+        <img onclick="previous()" id="back-button" src="images/arrow back.svg" alt="">
         <img onclick="next()" src="images/arrow.svg" alt="">
     </div>
         <section id="services">
@@ -109,7 +108,7 @@
                 <div class="cardText">
                     We design and develop websites and any form of web applications.</div>
             </div>
-            <div id="defaultNoDisplay" class="card">
+            <div  class="card">
                 <div class="cardImage">
                     <img src="images/business-ss.jpg" alt="" width="100%">
                 </div>
@@ -130,22 +129,21 @@
         <section id="about">
           
 
-                <div class="col-6">
+                <div>
                     <h3>
                         MISSION
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error id, esse iusto neque accusamus necessitatibus sequi tenetur illum tempora excepturi deserunt quasi laudantium, cupiditate voluptas laborum quaerat. Molestias, impedit.
+                        Tapify brings originality,efficiency and ingenuity to small and medium-sized businesses by incorporating new software techniques. 
                     </p>
                 </div>
                 
-                <div class="col-6">
+                <div>
                     <h3>
                         VISION
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error id, esse iusto neque accusamus necessitatibus sequi tenetur illum tempora excepturi deserunt quasi laudantium, cupiditate voluptas laborum quaerat. Molestias, impedit.
-                    </p>
+                        Our vision is to be one of the world’s leading and reliable software providers,offer a unique design experience for small and medium businesses, by providing the best effective business solutions.       </p>
                 </div>
 
         </section>
@@ -153,11 +151,11 @@
     </main>
 
     <footer >
-        <div style="flex: 50%;">
+        <div>
             <p>tapify</p>
         </div>
         
-        <div id="footer-links" style="flex:50%;">
+        <div id="footer-links">
             <ul>
                 <li>
                     <a href="">Home</a>
@@ -184,7 +182,7 @@
             </ul>
         </div>
         
-        <div style="flex: 50%;">
+        <div>
         <div id="email-us">
             <input type="text" placeholder="Email us"  >
             <img src="images/send.svg" alt="">
@@ -193,7 +191,7 @@
         <p style="font-size: 0.8rem;">Stay in touch with us for the freshest products</p>
         </div>
         
-        <div style="flex: 50%;">
+        <div>
         
             <p><small>&copy; 2021 Tapify - All rights reserved</small></p>
             <p>Contact us via <a href="mailto:info@tapify.com">info@tapify.com</a></p>
@@ -216,10 +214,26 @@
 
         function closenav() {
 
-            if(window.innerWidth<=480){
+            if(window.innerWidth<=600){
 
             document.getElementById('menu').style.width="0px";
             }
+        }
+
+        function next() {
+            if(window.innerWidth>600&& window.innerWidth<960){
+            document.getElementById('services').lastElementChild.style.display="block";
+            document.getElementById('services').firstElementChild.style.display="none";
+            }
+            
+        }
+        function previous() {
+            
+            if(window.innerWidth>600&& window.innerWidth<960){
+            document.getElementById('services').lastElementChild.style.display="none";
+            document.getElementById('services').firstElementChild.style.display="block";
+            }
+            
         }
 
     </script>
